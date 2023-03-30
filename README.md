@@ -1,1 +1,1 @@
-# personal-portfolio
+I have created a personal e-portfolio showcasing my skills and experience as a front-end engineer. The portfolio includes details about myself, my resume, and the technology stack that I am proficient in. In addition, it also features the projects that I have worked on over the past few months.
