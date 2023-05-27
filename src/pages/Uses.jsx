@@ -21,6 +21,12 @@ const dev = [
     description: 'I sought assistance from ChatGPT to verify the correctness of my implementation and to request guidance in debugging my code.',
   },
 
+  {
+    id: 3,
+    title: 'Postman',
+    description: 'I use Postman to streamline my API development workflow, allowing me to efficiently structure APIs, make requests, and test their functionality.'
+  },
+
 ]
 
 const design = [
@@ -65,7 +71,7 @@ const Uses = () => {
 
           <div className='pt-4 lg:pt-0'>
             {work.map((info) => (
-            <div className=' lg:ml-[90px]'>
+            <div key={info.id} className=' lg:ml-[90px]'>
               <h1 className='text-[#DDDDDE] font-title text-lg'>{info.title}</h1>
               <h1 className='text-[#8D8D95] font-p text-base mb-16'>{info.description}</h1>
             </div>
@@ -81,7 +87,7 @@ const Uses = () => {
 
         <div className='pt-4 lg:pt-0'>
           {dev.map((data) => (
-          <div className=' lg:ml-[87px]'>
+          <div key={data.id} className=' lg:ml-[87px]'>
             <h1 className='text-[#DDDDDE] font-title text-lg'>{data.title}</h1>
             <h1 className='text-[#8D8D95] font-p text-base mb-16'>{data.description}</h1>
           </div>
@@ -98,7 +104,7 @@ const Uses = () => {
 
       <div className='pt-4 lg:pt-0'>
         {design.map((info) => (
-        <div className=' lg:ml-[152px]'>
+        <div key={info.id} className=' lg:ml-[152px]'>
           <h1 className='text-[#DDDDDE] font-title text-lg'>{info.title}</h1>
           <h1 className='text-[#8D8D95] font-p text-base mb-16'>{info.description}</h1>
         </div>

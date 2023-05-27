@@ -62,6 +62,12 @@ const tools = [
     imgsrc: ai,
     title: 'ChatGPT',
     description: 'ChatGPT is an AI language model developed by OpenAI, designed to generate human-like responses and engage in conversational interactions with users.',
+  },
+  {
+    id: 4,
+    imgsrc: postMan,
+    title: 'Postman',
+    description: 'Postman is a popular API development and testing tool that simplifies the process of building, documenting, and testing APIs. It provides a user-friendly interface for making HTTP requests, enabling developers to interact with APIs easily.',
   }
 ]
 
@@ -77,6 +83,7 @@ import tailwind from '../assets/tailwind.webp'
 import git from '../assets/git.webp'
 import github from '../assets/github.webp'
 import ai from '../assets/ai.webp'
+import postMan from '../assets/postman.webp'
 
 const Technology = () => {
   return (
@@ -96,7 +103,7 @@ const Technology = () => {
          
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
           {tech.map((info) => (
-            <div className=' p-4 md:rounded-lg hover:bg-[#3F3F46]/25'>
+            <div key={info.id} className=' p-4 md:rounded-lg hover:bg-[#3F3F46]/25'>
               <img className='rounded-full h-10 w-10 mb-4' src={info.imgsrc} alt='' />
               <h1 className='text-[#DDDDDE] font-title text-lg'>{info.title}</h1>
               <p className='text-[#A1A1AA] font-p text-lg'>{info.description}</p>
@@ -110,7 +117,7 @@ const Technology = () => {
 
         <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
           {tools.map((data) => (
-            <div className=' p-4 md:rounded-lg hover:bg-[#3F3F46]/25 '>
+            <div key={data.id} className=' p-4 md:rounded-lg hover:bg-[#3F3F46]/25 '>
               <img className='rounded-full h-10 w-10 mb-4' src={data.imgsrc} alt='' />
               <h1 className='text-[#DDDDDE] font-title text-lg'>{data.title}</h1>
               <p className='text-[#A1A1AA] font-p text-lg'>{data.description}</p>

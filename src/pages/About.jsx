@@ -101,7 +101,7 @@ const About = () => {
 
             <div className='py-16 lg:hidden'>
               {media.map((src) => (
-              <div className='media flex items-center py-2'>
+              <div key={src.id} className='media flex items-center py-2'>
 
                 <div>
                 <Link className='text-[#A1A1AA] hover:text-[#45F0DF]' to={src.path}>

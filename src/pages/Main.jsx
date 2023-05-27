@@ -154,7 +154,8 @@ const Main = () => {
   })
 
   const downloadCV = () => {
-    const url = 'https://drive.google.com/file/d/115pgFqySiAmdPYF-oRFoWDMOuMSHN2SJ/view?usp=share_link'
+    const url = 'https://drive.google.com/file/d/1lIDtldg-C4wm2QrOuC8gNsmfoVp1Npmg/view?usp=sharing'
+    
     
     saveAs(url, 'justinpeligro_CV.pdf')
 
@@ -182,7 +183,7 @@ const Main = () => {
 
         <div className='flex py-8'>
         {icons.map((media) => (
-          <div className='pr-3' key={media.icon}>
+          <div className='pr-3' key={media.id}>
             <Link to={media.path}  className=' text-[#A1A1AA] hover:text-white'>{media.icon}</Link>
           </div>
         ))}
@@ -198,7 +199,7 @@ const Main = () => {
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
       {tech.map((techno) => (
 
-      <div className='flex items-center pb-5'>
+      <div key={techno.id} className='flex items-center pb-5'>
         <span className='mr-4 text-[#A1A1AA]'>{techno.icon}</span>
         <h1 className='text-[#A1A1AA]  font-main tracking-widest md:text-2xl'>{techno.name}</h1>
       </div>

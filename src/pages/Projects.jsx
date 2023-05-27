@@ -99,7 +99,7 @@ const Projects = () => {
     
       <div className='container-2 py-10 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
       {projects.map((exp) => (
-        <div className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
+        <div key={exp.id} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
            <img className='rounded-full h-10 w-10' src={exp.imgsrc} alt='' /> 
 
               <div className='py-5 flex justify-between w-full '>
