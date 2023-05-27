@@ -79,8 +79,8 @@ const Navbar = () => {
                <Link className='font-h1 hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
                 </div>   
 
-                <div className='' onClick={() =>setNav(!nav)}>
-                   {!nav ? <RxHamburgerMenu  size={30}/>: <AiOutlineClose size={30}/> } 
+                <div className='md:hidden' onClick={() =>setNav(!nav)}>
+                   {nav ?  <AiOutlineClose size={30}/> :  <RxHamburgerMenu  size={30}/>} 
                 </div>
 
 
@@ -88,7 +88,7 @@ const Navbar = () => {
 
             {/* mobile view navbar */}
 
-            <div className={!nav ? 'hidden' : 'bg-black h-screen w-4/5 fixed top-0 left-0 py-10 px-3'}>
+            <div className={nav ? 'bg-black h-screen w-4/5 fixed top-0 left-0 py-10 px-3 ease-in-out duration-500': 'fixed left-[-100%]' }>
               
             <div>
             <Link className='font-h1 hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
