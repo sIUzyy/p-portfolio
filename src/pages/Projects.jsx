@@ -2,6 +2,18 @@ const projects = [
 
   {
     id: 1,
+    imgsrc: bitvortex,
+    title: 'Bitvortex',
+    description: 'BitVortex: Unleash the Power of Cryptocurrency with Confidence. Seamlessly integrate our advanced API web platform to access real-time data.',
+    src: 'https://github.com/sIUzyy/p-bitvortex',
+    url: 'https://bitvortex-crypto.web.app/',
+    web: 'bitvortex.web.app',
+    date: '2023',
+    account: '',
+  },
+
+  {
+    id: 1,
     imgsrc: skycast,
     title: 'SkyCast',
     description: 'Skycast: Your go-to weather API for real-time and accurate forecasts worldwide. Plan, stay informed, and make confident decisions with ease.',
@@ -72,6 +84,7 @@ import rtu from '../assets/rtu.webp'
 import abacus from '../assets/abacus.webp'
 import encryp from '../assets/encrypted.webp'
 import skycast from '../assets/skycast.webp'
+import bitvortex from '../assets/bitvortex.png'
 import { Link } from 'react-router-dom'
 import {BsGithub, BsLink45Deg} from 'react-icons/bs'
 

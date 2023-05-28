@@ -52,6 +52,14 @@ const experiences = [
 
   {
     id: 1,
+    title: 'Bitvortex',
+    description: 'Cryptocurrency Api website',
+    date: 'May 2023',
+    imgsrc: bitvortex,
+  },
+
+  {
+    id: 2,
     title: 'SkyCast',
     description: 'Weather Api website',
     date: 'May 2023',
@@ -59,7 +67,7 @@ const experiences = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'EncryptedX',
     description: 'Informative website',
     date: 'May 2023',
@@ -67,7 +75,7 @@ const experiences = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'RTU POS',
     description: 'Point of Sale website',
     date: 'March 2023',
@@ -75,20 +83,14 @@ const experiences = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: 'RTU Apparel',
     description: 'E-commerce website',
     date: 'February 2023',
     imgsrc: rtu,
   },
 
-  {
-    id: 5,
-    title: 'Abacus Academy',
-    description: 'Informative website',
-    date: 'August 2022',
-    imgsrc: abacus,
-  },
+  
 ]
 
 const tech = [
@@ -142,6 +144,7 @@ import {  useTypewriter } from 'react-simple-typewriter'
 import rtu from '../assets/rtu.webp'
 import abacus from '../assets/abacus.webp'
 import encryp from '../assets/encrypted.webp'
+import bitvortex from '../assets/bitvortex.png'
 import skycast from '../assets/skycast.webp'
 import { saveAs } from 'file-saver'
 import style from "./css/style.css"

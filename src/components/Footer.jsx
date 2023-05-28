@@ -26,10 +26,12 @@ const info = [
 
 ]
 
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+
+  const [year] = useState(new Date().getFullYear())
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -55,7 +57,7 @@ const Footer = () => {
 
       <div className='pt-5 text-center md:pt-0'>
         <h1 className='text-[#5E5E66] font-p'>
-        © 2023 Justin Peligro. All rights reserved.
+        © {year} Justin Peligro. All rights reserved.
         </h1>
       </div>
     </div>
