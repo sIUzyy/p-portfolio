@@ -52,6 +52,14 @@ const experiences = [
 
   {
     id: 1,
+    title: 'TinyURLs',
+    description: 'Shortened URL Api website',
+    date: 'June 2023',
+    imgsrc: tinyurl,
+  },
+
+  {
+    id: 2,
     title: 'Bitvortex',
     description: 'Cryptocurrency Api website',
     date: 'May 2023',
@@ -59,19 +67,11 @@ const experiences = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'SkyCast',
     description: 'Weather Api website',
     date: 'May 2023',
     imgsrc: skycast,
-  },
-
-  {
-    id: 3,
-    title: 'EncryptedX',
-    description: 'Informative website',
-    date: 'May 2023',
-    imgsrc: encryp,
   },
 
   {
@@ -143,6 +143,7 @@ import {FaReact} from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
 import rtu from '../assets/rtu.webp'
 import abacus from '../assets/abacus.webp'
+import tinyurl from '../assets/tinyurl.png'
 import encryp from '../assets/encrypted.webp'
 import bitvortex from '../assets/bitvortex.png'
 import skycast from '../assets/skycast.webp'
