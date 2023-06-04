@@ -54,7 +54,7 @@ const experiences = [
     id: 1,
     title: 'TinyURLs',
     description: 'Shortened URL Api website',
-    date: 'June 2023',
+    date: '2023',
     imgsrc: tinyurl,
   },
 
@@ -62,7 +62,7 @@ const experiences = [
     id: 2,
     title: 'Bitvortex',
     description: 'Cryptocurrency Api website',
-    date: 'May 2023',
+    date: '2023',
     imgsrc: bitvortex,
   },
 
@@ -70,7 +70,7 @@ const experiences = [
     id: 3,
     title: 'SkyCast',
     description: 'Weather Api website',
-    date: 'May 2023',
+    date: '2023',
     imgsrc: skycast,
   },
 
@@ -78,7 +78,7 @@ const experiences = [
     id: 4,
     title: 'RTU POS',
     description: 'Point of Sale website',
-    date: 'March 2023',
+    date: '2023',
     imgsrc: rtu,
   },
 
@@ -86,7 +86,7 @@ const experiences = [
     id: 5,
     title: 'RTU Apparel',
     description: 'E-commerce website',
-    date: 'February 2023',
+    date: '2023',
     imgsrc: rtu,
   },
 
