@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
 
-  const [year] = useState(new Date().getFullYear())
+  const [year] = useState(new Date().getFullYear()) 
 
   const scrollToTop = () => {
     window.scrollTo({
