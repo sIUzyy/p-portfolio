@@ -2,30 +2,41 @@ const projects = [
 
   {
     id: 1,
-    imgsrc: crudify,
-    title: 'CRUDify',
-    description: '""Empowering Simplicity: CRUDify - Seamlessly Manage Your Data""',
-    src: 'https://github.com/sIUzyy/p-crudify',
-    url: 'https://crudifyyy.web.app/',
-    web: 'crudifyyy.web.app',
+    imgsrc: luxebay,
+    title: 'Luxebay',
+    description: 'Unlock Luxury, Discover LuxeBay',
+    src: 'https://github.com/sIUzyy/p-luxebay',
+    url: 'https://luxebay-ecommerce.web.app/',
+    web: 'luxebay.web.app',
     date: 'JUNE 2023',
-    account: '',
+    email: 'siuzysaur@gmail.com',
+    pass: '123456',
   },
 
   {
     id: 2,
-    imgsrc: tinyurl,
-    title: 'TinyURLs',
-    description: '"Elevate Your Links: Simplify, Share, and Track with TinyURLs!"',
-    src: 'https://github.com/sIUzyy/p-tinyurls',
-    url: 'https://tinyurlss.web.app/',
-    web: 'tinyurlss.web.app',
+    imgsrc: crudify,
+    title: 'CRUDify',
+    description: 'Empowering Simplicity: CRUDify - Seamlessly Manage Your Data',
+    src: 'https://github.com/sIUzyy/p-crudify',
+    url: 'https://crudifyyy.web.app/',
+    web: 'crudifyyy.web.app',
     date: 'JUNE 2023',
-    account: '',
   },
 
   {
     id: 3,
+    imgsrc: tinyurl,
+    title: 'TinyURLs',
+    description: 'Elevate Your Links: Simplify, Share, and Track with TinyURLs!',
+    src: 'https://github.com/sIUzyy/p-tinyurls',
+    url: 'https://tinyurlss.web.app/',
+    web: 'tinyurlss.web.app',
+    date: 'JUNE 2023',
+  },
+
+  {
+    id: 4,
     imgsrc: bitvortex,
     title: 'Bitvortex',
     description: 'BitVortex: Unleash the Power of Cryptocurrency with Confidence. Seamlessly integrate our advanced API web platform to access real-time data.',
@@ -33,11 +44,10 @@ const projects = [
     url: 'https://bitvortex-crypto.web.app/',
     web: 'bitvortex.web.app',
     date: 'MAY 2023',
-    account: '',
   },
 
   {
-    id: 4,
+    id: 5,
     imgsrc: skycast,
     title: 'SkyCast',
     description: 'Skycast: Your go-to weather API for real-time and accurate forecasts worldwide. Plan, stay informed, and make confident decisions with ease.',
@@ -45,11 +55,10 @@ const projects = [
     url: 'https://skycast-weatherapi.web.app/',
     web: 'skycast.web.app',
     date: 'MAY 2023',
-    account: '',
   },
 
   {
-    id: 5,
+    id: 6,
     imgsrc: encryp,
     title: 'EncryptedX',
     description: 'EncryptedX: Unveiling encryption’s secrets. Explore cryptography, privacy, and secure communication in a concise, informative website. Enhance your digital security now.',
@@ -62,7 +71,7 @@ const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     imgsrc: rtu,
     title: 'RTU POS',
     description: 'RTU POS: Seamlessly integrated with the RTU Apparel eCommerce site, it’s your one-stop solution for easy and efficient point-of-sale transactions.',
@@ -75,7 +84,7 @@ const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     imgsrc: rtu,
     title: 'RTU Apparel',
     description: 'RTU Apparel: Your online fashion destination for trendy styles and effortless shopping.',
@@ -88,7 +97,7 @@ const projects = [
   },
 
   {
-    id: 8,
+    id: 9,
     imgsrc: abacus,
     title: 'Abacaus Academy',
     description: 'Abacus Academy: Empowering learners through immersive boot camps. Unlock your potential and master in-demand skills.',
@@ -111,6 +120,7 @@ import skycast from '../assets/skycast.webp'
 import bitvortex from '../assets/bitvortex.png'
 import tinyurl from '../assets/tinyurl.png'
 import crudify from '../assets/crud.png'
+import luxebay from '../assets/luxebay.png'
 import { Link } from 'react-router-dom'
 import {BsGithub, BsLink45Deg} from 'react-icons/bs'
 

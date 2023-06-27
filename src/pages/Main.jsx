@@ -52,6 +52,15 @@ const experiences = [
 
   {
     id: 1,
+    title: 'Luxebay',
+    description: 'Ecommerce REDUX',
+    date: '2023',
+    imgsrc: luxebay,
+  },
+
+
+  {
+    id: 2,
     title: 'TinyURLs',
     description: 'Shortened URL Api website',
     date: '2023',
@@ -59,21 +68,14 @@ const experiences = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'Bitvortex',
     description: 'Cryptocurrency Api website',
     date: '2023',
     imgsrc: bitvortex,
   },
 
-  {
-    id: 3,
-    title: 'SkyCast',
-    description: 'Weather Api website',
-    date: '2023',
-    imgsrc: skycast,
-  },
-
+ 
   {
     id: 4,
     title: 'RTU POS',
@@ -137,16 +139,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import profile from '../assets/siuzy.webp'
 import {  AiOutlineInstagram, AiOutlineGithub, AiFillLinkedin, AiOutlineMail, AiOutlineLaptop, AiOutlineArrowDown,AiFillHtml5  } from 'react-icons/ai'
-import {DiCss3, DiSafari} from 'react-icons/di'
+import {DiCss3} from 'react-icons/di'
 import {SiJavascript, SiTailwindcss,SiFirebase} from 'react-icons/si'
 import {FaReact} from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
 import rtu from '../assets/rtu.webp'
-import abacus from '../assets/abacus.webp'
 import tinyurl from '../assets/tinyurl.png'
-import encryp from '../assets/encrypted.webp'
 import bitvortex from '../assets/bitvortex.png'
-import skycast from '../assets/skycast.webp'
+import luxebay from '../assets/luxebay.png'
 import { saveAs } from 'file-saver'
 import style from "./css/style.css"
 
