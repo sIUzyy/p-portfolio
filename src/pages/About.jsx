@@ -88,7 +88,7 @@ const About = () => {
                 I'm Justin Peligro, a computer engineering student who is also a self-taught front-end developer.
               </h1>
               
-              <p className='font-p text-justify text-lg text-[#A1A1AA]'>
+              <p className='font-p text-justify text-lg text-[#A1A1AA] '>
                 Since I was a kid, I have been passionate about technology and have had a strong desire to learn new things.
                 When I reached senior high school, I had opportunity to exposed into the world of coding, where I learned various programming languages and enhance my
                 logical thinking abilities. Now that I am in college, I have chosen to pursue computer engineering to expand my knowledge further. 

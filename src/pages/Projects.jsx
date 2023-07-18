@@ -1,7 +1,18 @@
 const projects = [
 
   {
-    id: 1,
+    imgsrc: recruit,
+    title: 'RecruitEase',
+    description: 'Unlock Your Hiring Potential with RecruitEase: Your Online Recruitment Solution',
+    src: 'https://github.com/sIUzyy/p-recruit',
+    url: 'https://recruiteasee.web.app/',
+    web: 'recruiteasee.web.app',
+    date: 'JULY 2023',
+    email: '',
+    pass: '',
+  },
+
+  {
     imgsrc: luxebay,
     title: 'Luxebay',
     description: 'Unlock Luxury, Discover LuxeBay',
@@ -14,7 +25,6 @@ const projects = [
   },
 
   {
-    id: 2,
     imgsrc: crudify,
     title: 'CRUDify',
     description: 'Empowering Simplicity: CRUDify - Seamlessly Manage Your Data',
@@ -24,8 +34,7 @@ const projects = [
     date: 'JUNE 2023',
   },
 
-  {
-    id: 3,
+  {  
     imgsrc: tinyurl,
     title: 'TinyURLs',
     description: 'Elevate Your Links: Simplify, Share, and Track with TinyURLs!',
@@ -36,7 +45,6 @@ const projects = [
   },
 
   {
-    id: 4,
     imgsrc: bitvortex,
     title: 'Bitvortex',
     description: 'BitVortex: Unleash the Power of Cryptocurrency with Confidence. Seamlessly integrate our advanced API web platform to access real-time data.',
@@ -47,7 +55,6 @@ const projects = [
   },
 
   {
-    id: 5,
     imgsrc: skycast,
     title: 'SkyCast',
     description: 'Skycast: Your go-to weather API for real-time and accurate forecasts worldwide. Plan, stay informed, and make confident decisions with ease.',
@@ -58,7 +65,6 @@ const projects = [
   },
 
   {
-    id: 6,
     imgsrc: encryp,
     title: 'EncryptedX',
     description: 'EncryptedX: Unveiling encryption’s secrets. Explore cryptography, privacy, and secure communication in a concise, informative website. Enhance your digital security now.',
@@ -71,7 +77,6 @@ const projects = [
   },
 
   {
-    id: 7,
     imgsrc: rtu,
     title: 'RTU POS',
     description: 'RTU POS: Seamlessly integrated with the RTU Apparel eCommerce site, it’s your one-stop solution for easy and efficient point-of-sale transactions.',
@@ -84,7 +89,6 @@ const projects = [
   },
 
   {
-    id: 8,
     imgsrc: rtu,
     title: 'RTU Apparel',
     description: 'RTU Apparel: Your online fashion destination for trendy styles and effortless shopping.',
@@ -96,8 +100,7 @@ const projects = [
     pass: '123456',
   },
 
-  {
-    id: 9,
+  { 
     imgsrc: abacus,
     title: 'Abacaus Academy',
     description: 'Abacus Academy: Empowering learners through immersive boot camps. Unlock your potential and master in-demand skills.',
@@ -121,6 +124,7 @@ import bitvortex from '../assets/bitvortex.png'
 import tinyurl from '../assets/tinyurl.png'
 import crudify from '../assets/crud.png'
 import luxebay from '../assets/luxebay.png'
+import recruit from '../assets/recruit.png'
 import { Link } from 'react-router-dom'
 import {BsGithub, BsLink45Deg} from 'react-icons/bs'
 
@@ -147,8 +151,8 @@ const Projects = () => {
 
     
       <div className='container-2 py-10 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-      {projects.map((exp) => (
-        <div key={exp.id} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
+      {projects.map((exp, index) => (
+        <div key={index} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
            <img className='rounded-full h-10 w-10' src={exp.imgsrc} alt='' /> 
 
               <div className='py-5 flex justify-between w-full '>

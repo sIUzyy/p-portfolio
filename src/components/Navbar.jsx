@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className='hidden md:flex md:items-center md:justify-between'>
 
           <div>
-            <Link className='font-h1 hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
+            <Link className='uppercase font-title text-sm tracking-widest hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
             </div>
 
             <div className='flex items-center'>
@@ -76,7 +76,7 @@ const Navbar = () => {
 
           <div className='flex items-center justify-between md:hidden'>
                <div>
-               <Link className='font-h1 hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
+               <Link className='uppercase font-title text-sm tracking-widest hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
                 </div>   
 
                 <div className='md:hidden' onClick={() =>setNav(!nav)}>
@@ -91,7 +91,7 @@ const Navbar = () => {
             <div className={nav ? 'bg-black h-screen w-4/5 fixed top-0 left-0 py-10 px-3 ease-in-out duration-500': 'fixed left-[-100%]' }>
               
             <div>
-            <Link className='font-h1 hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
+            <Link className='uppercase font-title text-sm tracking-widest hover:text-[#45F0DF] focus:text-[#45F0DF]' to='/'>sIUzy.web</Link>
             </div>
 
             <div className='grid gap-10 my-10 '>

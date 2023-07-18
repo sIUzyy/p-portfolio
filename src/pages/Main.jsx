@@ -56,6 +56,7 @@ const experiences = [
     description: 'Ecommerce REDUX',
     date: '2023',
     imgsrc: luxebay,
+    path: '/projects'
   },
 
 
@@ -65,6 +66,7 @@ const experiences = [
     description: 'Shortened URL Api website',
     date: '2023',
     imgsrc: tinyurl,
+    path: '/projects'
   },
 
   {
@@ -73,6 +75,7 @@ const experiences = [
     description: 'Cryptocurrency Api website',
     date: '2023',
     imgsrc: bitvortex,
+    path: '/projects'
   },
 
  
@@ -82,6 +85,7 @@ const experiences = [
     description: 'Point of Sale website',
     date: '2023',
     imgsrc: rtu,
+    path: '/projects'
   },
 
   {
@@ -90,6 +94,7 @@ const experiences = [
     description: 'E-commerce website',
     date: '2023',
     imgsrc: rtu,
+    path: '/projects'
   },
 
   
@@ -138,10 +143,23 @@ const tech = [
 import React from 'react'
 import { Link } from 'react-router-dom'
 import profile from '../assets/siuzy.webp'
-import {  AiOutlineInstagram, AiOutlineGithub, AiFillLinkedin, AiOutlineMail, AiOutlineLaptop, AiOutlineArrowDown,AiFillHtml5  } from 'react-icons/ai'
+import {  AiOutlineInstagram, 
+          AiOutlineGithub, 
+          AiFillLinkedin, 
+          AiOutlineMail, 
+          AiOutlineLaptop, 
+          AiOutlineArrowDown,
+          AiFillHtml5  
+} from 'react-icons/ai'
+
 import {DiCss3} from 'react-icons/di'
-import {SiJavascript, SiTailwindcss,SiFirebase} from 'react-icons/si'
-import {FaReact} from 'react-icons/fa'
+
+import {  SiJavascript, 
+          SiTailwindcss,
+          SiFirebase
+} from 'react-icons/si'
+
+import {  FaReact } from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
 import rtu from '../assets/rtu.webp'
 import tinyurl from '../assets/tinyurl.png'
@@ -152,17 +170,26 @@ import style from "./css/style.css"
 
 const Main = () => {
 
+  //type writer effect
   const [text] = useTypewriter({
     words: ['Computer Engineering', 'Front-End Developer'],
     loop: 0
   })
 
+
+  //download CV library
   const downloadCV = () => {
     const url = 'https://drive.google.com/file/d/1lIDtldg-C4wm2QrOuC8gNsmfoVp1Npmg/view?usp=sharing'
-    
-    
     saveAs(url, 'justinpeligro_CV.pdf')
 
+  }
+
+  //automatically scroll to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 
   return (
@@ -248,8 +275,9 @@ const Main = () => {
             </div>
 
             {experiences.map((exp) => (
-            <div key={exp.id} className='flex items-center justify-between my-5'> 
-            <div className='flex items-center'>
+            <Link key={exp.id} onClick={scrollToTop} to={exp.path}>  
+            <div  className='flex items-center justify-between my-5 hover:bg-[#3F3F46]/25 p-1 rounded-lg'> 
+            <div className='flex items-center '>
               <img className='w-10 h-10 rounded-full' src={exp.imgsrc} alt=''/>
 
               <div className='pl-2'>
@@ -265,6 +293,7 @@ const Main = () => {
               </div>
 
             </div>
+            </Link>
             ))}
 
             
