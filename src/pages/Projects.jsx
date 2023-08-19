@@ -1,121 +1,7 @@
-const projects = [
 
-  {
-    imgsrc: recruit,
-    title: 'RecruitEase',
-    description: 'Unlock Your Hiring Potential with RecruitEase: Your Online Recruitment Solution',
-    src: 'https://github.com/sIUzyy/p-recruit',
-    url: 'https://recruiteasee.web.app/',
-    web: 'recruiteasee.web.app',
-    date: 'JULY 2023',
-    email: '',
-    pass: '',
-  },
 
-  {
-    imgsrc: luxebay,
-    title: 'Luxebay',
-    description: 'Unlock Luxury, Discover LuxeBay',
-    src: 'https://github.com/sIUzyy/p-luxebay',
-    url: 'https://luxebay-ecommerce.web.app/',
-    web: 'luxebay.web.app',
-    date: 'JUNE 2023',
-    email: 'siuzysaur@gmail.com',
-    pass: '123456',
-  },
-
-  {
-    imgsrc: crudify,
-    title: 'CRUDify',
-    description: 'Empowering Simplicity: CRUDify - Seamlessly Manage Your Data',
-    src: 'https://github.com/sIUzyy/p-crudify',
-    url: 'https://crudifyyy.web.app/',
-    web: 'crudifyyy.web.app',
-    date: 'JUNE 2023',
-  },
-
-  {  
-    imgsrc: tinyurl,
-    title: 'TinyURLs',
-    description: 'Elevate Your Links: Simplify, Share, and Track with TinyURLs!',
-    src: 'https://github.com/sIUzyy/p-tinyurls',
-    url: 'https://tinyurlss.web.app/',
-    web: 'tinyurlss.web.app',
-    date: 'JUNE 2023',
-  },
-
-  {
-    imgsrc: bitvortex,
-    title: 'Bitvortex',
-    description: 'BitVortex: Unleash the Power of Cryptocurrency with Confidence. Seamlessly integrate our advanced API web platform to access real-time data.',
-    src: 'https://github.com/sIUzyy/p-bitvortex',
-    url: 'https://bitvortex-crypto.web.app/',
-    web: 'bitvortex.web.app',
-    date: 'MAY 2023',
-  },
-
-  {
-    imgsrc: skycast,
-    title: 'SkyCast',
-    description: 'Skycast: Your go-to weather API for real-time and accurate forecasts worldwide. Plan, stay informed, and make confident decisions with ease.',
-    src: 'https://github.com/sIUzyy/p-skycast',
-    url: 'https://skycast-weatherapi.web.app/',
-    web: 'skycast.web.app',
-    date: 'MAY 2023',
-  },
-
-  {
-    imgsrc: encryp,
-    title: 'EncryptedX',
-    description: 'EncryptedX: Unveiling encryption’s secrets. Explore cryptography, privacy, and secure communication in a concise, informative website. Enhance your digital security now.',
-    src: 'https://github.com/sIUzyy/p-encryptedX',
-    url: 'https://encryptedx.netlify.app',
-    web: 'encryptedX.netlify.app',
-    date: 'MAY 2023',
-    email: '',
-    pass: '',
-  },
-
-  {
-    imgsrc: rtu,
-    title: 'RTU POS',
-    description: 'RTU POS: Seamlessly integrated with the RTU Apparel eCommerce site, it’s your one-stop solution for easy and efficient point-of-sale transactions.',
-    src: 'https://github.com/sIUzyy/p-rtupos',
-    url: 'https://rtu-pos.web.app',
-    web: 'rtu-pos.web.app',
-    date: 'APRIL 2023',
-    email: 'rtuadmin2023@gmail.com',
-    pass: '123456',
-  },
-
-  {
-    imgsrc: rtu,
-    title: 'RTU Apparel',
-    description: 'RTU Apparel: Your online fashion destination for trendy styles and effortless shopping.',
-    src: 'https://github.com/sIUzyy/p-rtuapparel',
-    url: 'https://rtu-apparel.web.app',
-    web: 'rtu-apparel.web.app',
-    date: 'MARCH 2023',
-    email: 'siuzysaur@gmail.com',
-    pass: '123456',
-  },
-
-  { 
-    imgsrc: abacus,
-    title: 'Abacaus Academy',
-    description: 'Abacus Academy: Empowering learners through immersive boot camps. Unlock your potential and master in-demand skills.',
-    src: 'https://github.com/sIUzyy/p-abacus-academy',
-    url: 'https://abacusacademy-f06cc.web.app',
-    web: 'abacusacademy.web.app',
-    date: 'OCT 2022',
-    email: '',
-    pass: '',
-  },
-
- //
-]
-
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { projects } from '../api/projects'
 import rtu from '../assets/rtu.webp'
 import abacus from '../assets/abacus.webp'
 import encryp from '../assets/encrypted.webp'
@@ -130,16 +16,35 @@ import {BsGithub, BsLink45Deg} from 'react-icons/bs'
 
 const Projects = () => {
 
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prevCount) => {
+        if (prevCount === projects.length) {
+          clearInterval(interval); // Stop the interval once count reaches 20
+          return projects.length; // Set count to the real value
+        }
+        return prevCount + 1; // Increment count by 1 for each interval tick
+      });
+    }, 100); // Adjust the interval speed (lower value for faster increment)
 
+    return () => clearInterval(interval); // Clean up the interval on component unmount
+
+  }, []);
 
   return (
     <div className='max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>
 
+
       <div className='container-1'>
 
-        <h1 className='text-4xl font-h1 font-bold py-5'>  
-        My Recent Projects: A showcase of my creative endeavors in the past months.
+      <div className='mb-2 font-h1 text-[#A1A1AA]  '>
+        <h1 className='uppercase tracking-widest text-[12px]'>Total Projects: <label className='text-2xl'>{count}</label></h1>
+      </div>
+
+        <h1 className='text-4xl font-h1 font-bold pb-5'>  
+        My Recent Projects: A showcase of my creative endeavors in the past months. 
         </h1>
 
         <p className='text-[#A1A1AA] font-p text-lg'>
@@ -148,6 +53,7 @@ const Projects = () => {
 
       </div>
 
+     
 
     
       <div className='container-2 py-10 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
@@ -155,14 +61,25 @@ const Projects = () => {
         <div key={index} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
            <img className='rounded-full h-10 w-10' src={exp.imgsrc} alt='' /> 
 
-              <div className='py-5 flex justify-between w-full '>
+         
+            
+            <div className='flex text-sm font-h1 pt-5 items-center '>
+              <h1 className='pr-2 text-gray-600  '>{exp.date}</h1>
+              <h1 className='text-gray-600'>| {exp.tech}</h1>
+
+            </div>
+
+              <div className='pb-5 flex justify-between w-full '>
                 <h1 className='text-[#EFEFF0] font-main tracking-widest text-lg '>{exp.title}</h1>
-                <h1 className='text-[#EFEFF0] font-main tracking-widest text-lg '>{exp.date}</h1>
               </div>
+
+          
 
               <div>
                   <p className='text-[#A1A1AA] font-p text-base'>{exp.description}</p>
               </div>
+
+          
 
               <div className='py-4'>
                 <div className='flex items-center'>
@@ -186,6 +103,8 @@ const Projects = () => {
                 
               </div>
               )}
+
+              
         </div>
       ))}
 
