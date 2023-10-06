@@ -122,18 +122,24 @@ const tech = [
 
     {
       id: 4,
-      name: 'React',
+      name: 'ReactJS',
       icon: <FaReact className='hover:text-[#5DD3F3]' size={50}/>,
     },
 
     {
       id: 5,
+      name: 'NextJS',
+      icon: <TbBrandNextjs className='hover:text-white' size={50} />
+    },
+
+    {
+      id: 6,
       name: 'Tailwind',
       icon: <SiTailwindcss className='hover:text-[#38BDF8]' size={50}/>,
     },
 
     {
-      id: 6,
+      id: 7,
       name: 'Firebase',
       icon: <SiFirebase className='hover:text-[#FFCD33]' size={50}/>,
     },
@@ -151,6 +157,8 @@ import {  AiOutlineInstagram,
           AiOutlineArrowDown,
           AiFillHtml5  
 } from 'react-icons/ai'
+
+import { TbBrandNextjs } from 'react-icons/tb'
 
 import {DiCss3} from 'react-icons/di'
 
@@ -179,7 +187,7 @@ const Main = () => {
 
   //download CV library
   const downloadCV = () => {
-    const url = 'https://drive.google.com/file/d/1lIDtldg-C4wm2QrOuC8gNsmfoVp1Npmg/view?usp=sharing'
+    const url = 'https://drive.google.com/file/d/1rAX9XVNC9jdi3-fv2xHAuhQvuyVtq3Pp/view?usp=sharing'
     saveAs(url, 'justinpeligro_CV.pdf')
 
   }
@@ -227,7 +235,7 @@ const Main = () => {
     </div>
 
     <div className=''>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6'>
+      <div className='grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5'>
       {tech.map((techno) => (
 
       <div key={techno.id} className='flex items-center pb-5'>
@@ -301,9 +309,7 @@ const Main = () => {
             <div className='flex'>
               <button onClick={downloadCV} className='bg-[#202022] w-full p-2 rounded-lg font-title hover:opacity-90'>
               <span style={{ display: 'inline-block' }}>Download CV</span> <AiOutlineArrowDown size={18} className='ml-1' style={{ display: 'inline-block' }} />
-              </button>
-
-             
+              </button> 
             </div>
 
 

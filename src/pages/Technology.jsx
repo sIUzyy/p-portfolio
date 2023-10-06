@@ -36,6 +36,13 @@ const tech = [
 
   {
     id: 6,
+    imgsrc: next,
+    title: 'NextJS',
+    description: ' Streamline React development with server-side rendering, automatic code splitting, and effortless client-side navigation. Ideal for building fast, interactive, and SEO-friendly web apps.',
+  },
+
+  {
+    id: 7,
     imgsrc: firebase,
     title: 'Firebase',
     description: 'Firebase is a platform developed by Google that provides various backend services and tools for building and scaling web and mobile applications.',
@@ -79,6 +86,7 @@ import js from '../assets/js-tech.webp'
 import react from '../assets/react-tech.webp'
 import firebase from '../assets/fb-tech.webp'
 import tailwind from '../assets/tailwind.webp'
+import next from '../assets/next.png'
 
 import git from '../assets/git.webp'
 import github from '../assets/github.webp'

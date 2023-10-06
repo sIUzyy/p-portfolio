@@ -1,16 +1,5 @@
-
-
 import React, {useState, useEffect} from 'react'
 import { projects } from '../api/projects'
-import rtu from '../assets/rtu.webp'
-import abacus from '../assets/abacus.webp'
-import encryp from '../assets/encrypted.webp'
-import skycast from '../assets/skycast.webp'
-import bitvortex from '../assets/bitvortex.png'
-import tinyurl from '../assets/tinyurl.png'
-import crudify from '../assets/crud.png'
-import luxebay from '../assets/luxebay.png'
-import recruit from '../assets/recruit.png'
 import { Link } from 'react-router-dom'
 import {BsGithub, BsLink45Deg} from 'react-icons/bs'
 
