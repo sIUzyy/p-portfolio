@@ -22,7 +22,7 @@ const education = [
 
   {
     id: 1,
-    date: 'Expected Graduation Date: March 2025',
+    date: 'Expected Graduation Date: June 2025',
     university: 'Rizal Technological University - Boni Campus',
     description: 'Bachelor of Science in Computer Engineering',
     details: 'In addition to being honored as a Dean`s List recipient, my coursework encompasses a range of relevant subjects, including Java Programming, C++ Programming, Assembly Language Programming, Data Structures and Algorithms. '
@@ -48,57 +48,6 @@ const education = [
 
 ]
 
-const experiences = [
-
-  {
-    id: 1,
-    title: 'Luxebay',
-    description: 'Ecommerce REDUX',
-    date: '2023',
-    imgsrc: luxebay,
-    path: '/projects'
-  },
-
-
-  {
-    id: 2,
-    title: 'TinyURLs',
-    description: 'Shortened URL Api website',
-    date: '2023',
-    imgsrc: tinyurl,
-    path: '/projects'
-  },
-
-  {
-    id: 3,
-    title: 'Bitvortex',
-    description: 'Cryptocurrency Api website',
-    date: '2023',
-    imgsrc: bitvortex,
-    path: '/projects'
-  },
-
- 
-  {
-    id: 4,
-    title: 'RTU POS',
-    description: 'Point of Sale website',
-    date: '2023',
-    imgsrc: rtu,
-    path: '/projects'
-  },
-
-  {
-    id: 5,
-    title: 'RTU Apparel',
-    description: 'E-commerce website',
-    date: '2023',
-    imgsrc: rtu,
-    path: '/projects'
-  },
-
-  
-]
 
 const tech = [
 
@@ -158,9 +107,12 @@ import {  AiOutlineInstagram,
           AiFillHtml5  
 } from 'react-icons/ai'
 
+import { work } from '../api/work'
+import { experiences } from '../api/work'
+
 import { TbBrandNextjs } from 'react-icons/tb'
 
-import {DiCss3} from 'react-icons/di'
+import { DiCss3 } from 'react-icons/di'
 
 import {  SiJavascript, 
           SiTailwindcss,
@@ -169,10 +121,7 @@ import {  SiJavascript,
 
 import {  FaReact } from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
-import rtu from '../assets/rtu.webp'
-import tinyurl from '../assets/tinyurl.png'
-import bitvortex from '../assets/bitvortex.png'
-import luxebay from '../assets/luxebay.png'
+
 import { saveAs } from 'file-saver'
 import style from "./css/style.css"
 
@@ -187,7 +136,7 @@ const Main = () => {
 
   //download CV library
   const downloadCV = () => {
-    const url = 'https://drive.google.com/file/d/1rAX9XVNC9jdi3-fv2xHAuhQvuyVtq3Pp/view?usp=sharing'
+    const url = 'https://drive.google.com/drive/u/0/folders/1cwTXgTD-o1se0whrcNoLGO5Vb1iIxzex'
     saveAs(url, 'justinpeligro_CV.pdf')
 
   }
@@ -246,6 +195,8 @@ const Main = () => {
       </div>
     </div>
 
+    
+
    
     <div className='main-container py-4 lg:flex'>
 
@@ -276,6 +227,33 @@ const Main = () => {
           </div>
 
           <div className='border border-[#27272C] rounded-lg p-4 mt-10'>
+            
+            <div className='flex items-center'>
+            <AiOutlineLaptop className='text-[#A1A1AA]' size={23}/>
+            <h1 className='ml-3 text-[#EFEFF0] font-title text-lg mt-1'>Working Experiences</h1>
+            </div>
+
+            {work.map((w) => (
+              <Link  key={w.id} onClick={scrollToTop} to={w.path}>  
+            <div  className='flex items-center justify-between my-5 hover:bg-[#3F3F46]/25 p-1 rounded-lg'> 
+            <div className='flex items-center '>
+              <img className='w-10 h-10 rounded-full ' src={w.imgsrc} alt=''/>
+
+              <div className='pl-2'>
+                <h1 className='text-[#F4F4F5] font-title'>{w.company}</h1>
+                <h1 className='text-[#8C8C94] font-p'>{w.position}</h1>
+                </div>
+
+              </div>
+
+              <div>
+                <h1 className='text-[#64646D] font-p'>{w.date.year}</h1>
+            
+              </div>
+
+            </div>
+            </Link>
+            ))}
 
             <div className='flex items-center'>
             <AiOutlineLaptop className='text-[#A1A1AA]' size={23}/>
@@ -300,9 +278,14 @@ const Main = () => {
             
               </div>
 
+              
             </div>
             </Link>
+            
             ))}
+            <Link onClick={scrollToTop} to={'/projects'}>
+              <h1 className='text-[#8D8D95] font-title mb-5 underline hover:text-white'>Check out more of my previous projects.</h1>
+            </Link>
 
             
 

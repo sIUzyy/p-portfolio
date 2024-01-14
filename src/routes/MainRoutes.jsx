@@ -13,6 +13,7 @@ import Projects from '../pages/Projects'
 import Uses from '../pages/Uses'
 import Technology from '../pages/Technology'
 import Error from "../components/Error"
+import Work from "../pages/Work"
 
 const MainRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const MainRoutes = () => {
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/uses" element={<Uses/>}/>
                 <Route path="/technology" element={<Technology/>}/>
+                <Route path="/work" element={<Work/>}/>
                 <Route path="*" element={<Error/>} />
 
 

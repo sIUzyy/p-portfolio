@@ -5,7 +5,7 @@ const Error = () => {
     <div className={`main-content max-w-2xl h-screen flex justify-center items-center lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12`}>
 
         <div className='text-center font-main '>
-            <h1 className='text-3xl text-[#45F0DF]'>404</h1>
+            <h1 className='text-3xl text-[#A1A1AA]'>404</h1>
             <p className='text-lg'>PAGE NOT FOUND</p>
             
         </div>        

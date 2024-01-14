@@ -49,7 +49,7 @@ const Footer = () => {
     {info.map((data) => (
 
       <div key={data.id}>
-        <Link to={data.path} onClick={scrollToTop} className='pr-3 text-[#E1E1E4] font-title hover:text-[#45F0DF] focus:text-[#45F0DF] '>{data.title}</Link>
+        <Link to={data.path} onClick={scrollToTop} className='pr-3 text-[#E1E1E4] font-title hover:text-[#A1A1AA] focus:text-[#A1A1AA] '>{data.title}</Link>
         </div>
       ))}
 

@@ -1,42 +1,7 @@
-const media = [
-
-  {
-    id: 1,
-    at: 'siuzy.web',
-    path: 'https://www.instagram.com/siuzy.web/',
-    icon: <AiOutlineInstagram size={25}/>,
-  },
-
-  {
-    id: 2,
-    at: 'sIUzyy',
-    path: 'https://github.com/sIUzyy',
-    icon: <AiOutlineGithub size={25}/>,
-  },
-
-  {
-    id: 3,
-    at: 'Justin Peligro',
-    path: 'https://www.linkedin.com/in/justin-peligro-49a07b274/',
-    icon: <AiFillLinkedin size={25}/>,
-  },
-
-  {
-    id: 4,
-    at: 'justinpeligro.c04@gmail.com',
-    path: 'https://mail.google.com/mail/u/1/#inbox',
-    icon: <AiOutlineMail size={25}/>,
-  },
-
-
-]
-
-
 import React from 'react'
 import tin from '../assets/tin.webp'
 import { Link } from 'react-router-dom'
-import {  AiOutlineInstagram, AiOutlineGithub, AiFillLinkedin, AiOutlineMail } from 'react-icons/ai'
-
+import { media } from '../api/technology'
 
 const About = () => {
   return (
@@ -61,7 +26,7 @@ const About = () => {
                   </Link>
                 </div>
 
-                <div className='flex items-center pl-3 font-p text-lg hover:text-[#45F0DF]'>
+                <div className='flex items-center pl-3 font-p text-lg hover:text-[#A1A1AA] focus:text-[#A1A1AA]'>
                   <Link to={src.path}>
                   {src.at}
                 </Link>
@@ -79,10 +44,7 @@ const About = () => {
 
 
         <div className='col-2 lg:w-3/5'>
-
-
             <div className='py-10'>
-
               <div>
               <h1 className='pb-5 text-4xl font-h1 font-bold'>
                 I'm Justin Peligro, a computer engineering student who is also a self-taught front-end developer.
@@ -113,26 +75,13 @@ const About = () => {
                   <Link className='font-p text-lg hover:text-[#45F0DF]' to={src.path}>
                   {src.at}
                 </Link>
-
                 </div>
-
-
               </div>
               ))}
               </div>
-
             </div>
-
-
         </div> 
- 
-
-
-
-
       </div>
-
-
     </div>
   )
 }
