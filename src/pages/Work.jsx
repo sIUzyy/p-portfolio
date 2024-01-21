@@ -1,6 +1,8 @@
 
 import React from 'react'
 import { work } from '../api/work'
+import { Link } from 'react-router-dom'
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const Work = () => {
 
@@ -50,6 +52,13 @@ const Work = () => {
         ) : (
             <p>No responsibilities listed</p>
         )}
+        </div>
+
+        <div className='flex justify-end  font-h1 '>
+          <div className='flex justify-between items-center'>
+            <Link className='mr-1' target='_blank'  to={'https://drive.google.com/drive/folders/1XPDSIXH7AIiQDvT_PBw5oazt9tnmQvpN?usp=sharing'}>Certification</Link>
+            <HiOutlineArrowLongRight/>
+          </div>
         </div>
 
 

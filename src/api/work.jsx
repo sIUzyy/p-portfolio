@@ -27,11 +27,9 @@ export const work = [
         path: '/work',
     },
 
-    
-   
+ 
 ]
    
-
 // persona experiences data...
 export const experiences = [
 

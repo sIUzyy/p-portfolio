@@ -4,25 +4,30 @@ const info = [
     title: 'About',
     path: '/about',
   },
-  
+
   {
     id: 2,
+    title: 'Work',
+    path: '/work',
+  },
+
+  {
+    id: 3,
     title: 'Projects',
     path: '/projects',
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'Technology',
     path: '/technology',
   },
 
-  {
-    id: 4,
-    title: 'Uses',
-    path: '/uses',
-  },
-
+  // {
+  //   id: 5,
+  //   title: 'Uses',
+  //   path: '/uses',
+  // },
 
 ]
 

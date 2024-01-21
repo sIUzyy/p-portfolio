@@ -8,21 +8,28 @@ const navbar = [
 
   {
     id: 2,
+    name: 'Work',
+    path: '/work',
+  },
+
+
+  {
+    id: 3,
     name: 'Projects',
     path: '/projects',
   },
 
   {
-    id: 3,
+    id: 4,
     name: 'Technology',
     path: '/technology',
   },
 
-  {
-    id: 4,
-    name: 'Uses',
-    path: '/uses',
-  },
+  // {
+  //   id: 4,
+  //   name: 'Uses',
+  //   path: '/uses',
+  // },
 
   
 ]
