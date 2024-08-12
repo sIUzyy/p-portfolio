@@ -166,7 +166,11 @@ const Main = () => {
 
   const downloadCV = () => {
 
-    const url = './public/justinpeligro_CV.pdf'
+    // use this for localhost testing
+    const url = './public/justinpeligro_CV.pdf' 
+
+    // use this if you will deploy the website.
+    //const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' 
 
     fetch(url)
       .then(res => res.blob())
