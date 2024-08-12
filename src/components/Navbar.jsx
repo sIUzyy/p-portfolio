@@ -19,17 +19,17 @@ const navbar = [
     path: '/projects',
   },
 
-  {
-    id: 4,
-    name: 'Technology',
-    path: '/technology',
-  },
-
   // {
   //   id: 4,
-  //   name: 'Uses',
-  //   path: '/uses',
+  //   name: 'Technology',
+  //   path: '/technology',
   // },
+
+  {
+    id: 4,
+    name: 'Uses',
+    path: '/uses',
+  },
 
   
 ]
@@ -59,9 +59,6 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-
-
 
   return (
     <div className='max-w-2xl  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-10  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>

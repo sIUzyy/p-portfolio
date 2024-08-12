@@ -16,7 +16,7 @@ const Work = () => {
         </h1>
 
         <p className='text-[#A1A1AA] font-p text-lg'>
-        In my recent professional experiences, I've navigated diverse challenges, gaining valuable skills and making a positive impact in my recent experiences.
+        In my recent work experiences, I’ve faced different challenges, developed important skills, and made a meaningful impact.
         </p>
 
       </div>

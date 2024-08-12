@@ -93,6 +93,24 @@ const tech = [
       icon: <SiFirebase className='hover:text-[#FFCD33]' size={50}/>,
     },
 
+    {
+      id: 8,
+      name: 'MongoDB',
+      icon: <SiMongodb className='hover:text-[#5a9635]' size={50} />
+    },
+
+    {
+      id: 9,
+      name: 'Git',
+      icon: <FaGitAlt className='hover:text-[#f03c2e]' size={50} />
+    },
+
+    {
+      id: 10,
+      name: 'GitHub',
+      icon: <AiFillGithub className='hover:text-[#ffffff]' size={50} />
+    },
+
 ]
 
 import React from 'react'
@@ -104,8 +122,13 @@ import {  AiOutlineInstagram,
           AiOutlineMail, 
           AiOutlineLaptop, 
           AiOutlineArrowDown,
-          AiFillHtml5  
+          AiFillHtml5,
+          AiFillGithub  
 } from 'react-icons/ai'
+
+import { SiMongodb } from "react-icons/si"
+import { FaGitAlt } from "react-icons/fa";
+
 
 import { work } from '../api/work'
 import { experiences } from '../api/work'
@@ -135,11 +158,26 @@ const Main = () => {
 
 
   //download CV library
+  // const downloadCV = () => {
+  //   const url = 'https://drive.google.com/drive/u/0/folders/1cwTXgTD-o1se0whrcNoLGO5Vb1iIxzex'
+  //   saveAs(url, 'justinpeligro_CV.pdf')
+
+  // }
+
   const downloadCV = () => {
-    const url = 'https://drive.google.com/drive/u/0/folders/1cwTXgTD-o1se0whrcNoLGO5Vb1iIxzex'
-    saveAs(url, 'justinpeligro_CV.pdf')
+
+    const url = './public/justinpeligro_CV.pdf'
+
+    fetch(url)
+      .then(res => res.blob())
+      .then(blob => {
+        saveAs(blob, 'justinpeligro_CV.pdf')
+      })
+      .catch(err => alert('Error downloading the file:', err))
+
 
   }
+
 
   //automatically scroll to the top
   const scrollToTop = () => {
@@ -165,7 +203,7 @@ const Main = () => {
 
       <div>
         <p className='text-[#A1A1AA] font-p text-lg'>
-        I'm Justin, a computer engineering student from Rizal Technological University, 
+        I’m Justin, a computer engineering student from Rizal Technological University, 
         and a self-taught front-end developer proficient in HTML, CSS, JavaScript, and React, creating dynamic and visually stunning web applications.
         </p>
 
@@ -222,7 +260,7 @@ const Main = () => {
             <h1 className='ml-3 text-[#EFEFF0] font-title text-lg mt-1'>Contact me!</h1>
             </div>
 
-            <p className='text-[#9C9CA5] font-p text-base'>Feel free to contact me at <span className='text-[#EFEFF0]'>justinpeligro.c04@gmail.com</span> for any inquiries or opportunities.</p>
+            <p className='text-[#9C9CA5] font-p text-base'>Feel free to contact me at <a href='mailto:justinpeligro.c04@gmail.com' title='justinpeligro.c04@gmail.com' className='text-[#EFEFF0]'>justinpeligro.c04@gmail.com</a> for any inquiries or opportunities.</p>
 
           </div>
 

@@ -18,7 +18,7 @@ const dev = [
   {
     id: 2,
     title: 'ChatGPT',
-    description: 'I sought assistance from ChatGPT to verify the correctness of my implementation and to request guidance in debugging my code.',
+    description: 'I seek assistance from ChatGPT to verify the correctness of my implementation and to request guidance in debugging my code.',
   },
 
   {
@@ -54,11 +54,11 @@ const Uses = () => {
 
         <div className='container-1'>
           <h1 className='text-4xl font-h1 font-bold py-5 '>
-          Discover the essential gadgets and software that I use throughout my development journey.
+          Check out the gadgets and software I rely on during my development journey.
           </h1>
 
           <p className='text-[#A1A1AA] font-p text-lg pb-10'>
-          Throughout my development journey, I rely on a range of essential gadgets and software to enhance my productivity and facilitate seamless workflow.
+          Throughout my development journey, I rely on a range of essential gadgets and software to enhance my productivity.
           </p>
         </div>
 

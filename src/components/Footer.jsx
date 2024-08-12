@@ -17,17 +17,17 @@ const info = [
     path: '/projects',
   },
 
+  // {
+  //   id: 4,
+  //   title: 'Technology',
+  //   path: '/technology',
+  // },
+
   {
     id: 4,
-    title: 'Technology',
-    path: '/technology',
+    title: 'Uses',
+    path: '/uses',
   },
-
-  // {
-  //   id: 5,
-  //   title: 'Uses',
-  //   path: '/uses',
-  // },
 
 ]
 

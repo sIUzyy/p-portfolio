@@ -107,7 +107,7 @@ export const media = [
     {
       id: 4,
       at: 'justinpeligro.c04@gmail.com',
-      path: 'https://mail.google.com/mail/u/1/#inbox',
+      path: 'mailto:justinpeligro.c04@gmail.com',
       icon: <AiOutlineMail size={25}/>,
     },
   

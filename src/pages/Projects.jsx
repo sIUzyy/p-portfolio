@@ -33,11 +33,11 @@ const Projects = () => {
       </div>
 
         <h1 className='text-4xl font-h1 font-bold pb-5'>  
-        My Recent Projects: A showcase of my creative endeavors in the past months. 
+        My Recent Projects: Here are some projects I’ve worked on in the past few months.
         </h1>
 
         <p className='text-[#A1A1AA] font-p text-lg'>
-        Projects I've Crafted: Explore my recent creations with source code available on GitHub and deployed for your interactive experience.
+        Explore my recent projects with source code available on GitHub and deployed for your interactive experience.
         </p>
 
       </div>

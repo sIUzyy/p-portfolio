@@ -5,12 +5,7 @@ const Technology = () => {
     <div className='max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>
       
       <div className='container-1'>
-        <h1 className='text-4xl font-h1 font-bold py-5'>Explore the cutting-edge technologies powering my coding journey, from robust frameworks to efficient programming languages</h1>
-
-        <p className='text-[#A1A1AA] font-p text-lg pb-10'>
-        Immerse yourself in a coding journey that harnesses the full potential of cutting-edge technologies,
-        incorporating resilient frameworks and optimized programming languages to propel your development skills to new level.
-        </p>
+        <h1 className='text-4xl font-h1 font-bold pt-5 pb-10'>Technologies and Tools I’ve used.</h1>
       </div>
 
       <div className='container-2'>

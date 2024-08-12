@@ -47,16 +47,11 @@ const About = () => {
             <div className='py-10'>
               <div>
               <h1 className='pb-5 text-4xl font-h1 font-bold'>
-                I'm Justin Peligro, a computer engineering student who is also a self-taught front-end developer.
+                I’m Justin Peligro, a computer engineering student who is also a self-taught front-end developer.
               </h1>
               
-              <p className='font-p text-justify text-lg text-[#A1A1AA] '>
-                Since I was a kid, I have been passionate about technology and have had a strong desire to learn new things.
-                When I reached senior high school, I had opportunity to exposed into the world of coding, where I learned various programming languages and enhance my
-                logical thinking abilities. Now that I am in college, I have chosen to pursue computer engineering to expand my knowledge further. 
-                Additionally, while studying, I have taken it upon myself to become a self-taught front-end developer.
-                 Throughout this journey, I have acquired extensive knowledge and skills, which I have applied in numerous projects to enhance my proficiency in this field. 
-                 I firmly believe that consistent daily practice is essential to excel in any field.
+              <p className='font-p  text-lg text-[#A1A1AA] '>
+              Since then, I’ve been passionate about technology and have learned programming languages. Currently pursuing computer engineering and becoming a self-taught front-end developer, I’ve gained broad knowledge and skills. Consistent practice is important for excelling in any field, as I’ve applied my skills to many projects
 
               </p>
               </div>
