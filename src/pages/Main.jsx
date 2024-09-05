@@ -159,9 +159,17 @@ const Main = () => {
   // download CV library
   const downloadCV = () => {
 
+<<<<<<< HEAD
     // path for my cv, i uploaded it on my public repo.
     const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' // when deploying use this.
     // const url = 'public/justinpeligro_CV.pdf' // local host testing
+=======
+    // use this for localhost testing
+    const url = './public/justinpeligro_CV.pdf' 
+
+    // use this if you will deploy the website.
+    //const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' 
+>>>>>>> 140267e8fc079fec3493851c5423aee366bc6d86
 
     // fetch the url using promise.
     fetch(url)
