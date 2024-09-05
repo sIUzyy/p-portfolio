@@ -1,37 +1,38 @@
 const info = [
+
   {
     id: 1,
+    title: 'Main',
+    path: '/',
+  },
+  {
+    id: 2,
     title: 'About',
     path: '/about',
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'Work',
     path: '/work',
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'Projects',
     path: '/projects',
   },
 
-  // {
-  //   id: 4,
-  //   title: 'Technology',
-  //   path: '/technology',
-  // },
 
   {
-    id: 4,
+    id: 5,
     title: 'Uses',
     path: '/uses',
   },
 
 ]
 
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {

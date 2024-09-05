@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { work } from '../api/work'
 import { Link } from 'react-router-dom'
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
@@ -26,7 +25,7 @@ const Work = () => {
       
       {work.map((works, index) => (
         <div key={index} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
-        <img className='rounded-full h-10 w-10' alt='knowles-intern' src={works.imgsrc} />
+        <img className='rounded-full h-10 w-10' alt='work-img' src={works.imgsrc} />
 
         <div className='flex text-sm font-h1 pt-5 items-center '>
               <h1 className='pr-2 text-gray-600  '>{works.date}</h1>
@@ -56,7 +55,7 @@ const Work = () => {
 
         <div className='flex justify-end  font-h1 '>
           <div className='flex justify-between items-center'>
-            <Link className='mr-1' target='_blank'  to={'https://drive.google.com/drive/folders/1XPDSIXH7AIiQDvT_PBw5oazt9tnmQvpN?usp=sharing'}>Certification</Link>
+            <Link className='mr-1' to={'/certification'} title='Click to View the Certifications'>Certification</Link>
             <HiOutlineArrowLongRight/>
           </div>
         </div>

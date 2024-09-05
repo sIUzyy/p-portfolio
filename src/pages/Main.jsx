@@ -25,7 +25,7 @@ const education = [
     date: 'Expected Graduation Date: June 2025',
     university: 'Rizal Technological University - Boni Campus',
     description: 'Bachelor of Science in Computer Engineering',
-    details: 'In addition to being honored as a Dean`s List recipient, my coursework encompasses a range of relevant subjects, including Java Programming, C++ Programming, Assembly Language Programming, Data Structures and Algorithms. '
+    details: 'In addition to being honored as a Dean`s List recipient, my coursework covered a range of relevant subjects, including Java Programming, C++ Programming, Assembly Language Programming, Data Structures and Algorithms. '
   },
  
 
@@ -34,7 +34,7 @@ const education = [
     date: 'Graduated in March 2021',
     university: 'Arellano University - Plaridel Campus',
     description: 'Specialization in Information and Communication Technology',
-    details: 'In addition to being consistently recognized as a student honor awardee, my coursework encompasses a range of relevant subjects, including Java Programming, C++ Programming, C# Programming, PHP Web Development, and HTML & CSS Fundamentals.'
+    details: 'In addition to being consistently recognized as a student honor awardee, my coursework covered a range of relevant subjects, including Java Programming, C++ Programming, C# Programming, PHP Web Development, and HTML & CSS Fundamentals.'
   },
 
   
@@ -113,7 +113,6 @@ const tech = [
 
 ]
 
-import React from 'react'
 import { Link } from 'react-router-dom'
 import profile from '../assets/siuzy.webp'
 import {  AiOutlineInstagram, 
@@ -146,7 +145,7 @@ import {  FaReact } from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
 
 import { saveAs } from 'file-saver'
-import style from "./css/style.css"
+// import style from "./css/style.css"
 
 const Main = () => {
 
@@ -157,23 +156,20 @@ const Main = () => {
   })
 
 
-  //download CV library
-  // const downloadCV = () => {
-  //   const url = 'https://drive.google.com/drive/u/0/folders/1cwTXgTD-o1se0whrcNoLGO5Vb1iIxzex'
-  //   saveAs(url, 'justinpeligro_CV.pdf')
-
-  // }
-
+  // download CV library
   const downloadCV = () => {
 
-    const url = './public/justinpeligro_CV.pdf'
+    // path for my cv, i uploaded it on my public repo.
+    const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' // when deploying use this.
+    // const url = 'public/justinpeligro_CV.pdf' // local host testing
 
+    // fetch the url using promise.
     fetch(url)
       .then(res => res.blob())
       .then(blob => {
         saveAs(blob, 'justinpeligro_CV.pdf')
       })
-      .catch(err => alert('Error downloading the file:', err))
+      .catch(err => alert('Error downloading the file', err))
 
 
   }
@@ -193,7 +189,7 @@ const Main = () => {
     <div className='py-2'>
       <div className=''>
         <Link to='/'>
-        <img className='rounded-full w-14 h-14' src={profile} alt='profile' />
+        <img className='rounded-full w-14 h-14' src={profile} alt='profile-picture' />
         </Link>
       </div>  
 
@@ -210,7 +206,7 @@ const Main = () => {
         <div className='flex py-8'>
         {icons.map((media) => (
           <div className='pr-3' key={media.id}>
-            <Link to={media.path}  className=' text-[#A1A1AA] hover:text-white'>{media.icon}</Link>
+            <Link target='_blank' to={media.path}  className=' text-[#A1A1AA] hover:text-white'>{media.icon}</Link>
           </div>
         ))}
       </div>
@@ -275,7 +271,7 @@ const Main = () => {
               <Link  key={w.id} onClick={scrollToTop} to={w.path}>  
             <div  className='flex items-center justify-between my-5 hover:bg-[#3F3F46]/25 p-1 rounded-lg'> 
             <div className='flex items-center '>
-              <img className='w-10 h-10 rounded-full ' src={w.imgsrc} alt=''/>
+              <img loading='lazy' className='w-10 h-10 rounded-full ' src={w.imgsrc} alt='work-img'/>
 
               <div className='pl-2'>
                 <h1 className='text-[#F4F4F5] font-title'>{w.company}</h1>
@@ -302,7 +298,7 @@ const Main = () => {
             <Link key={exp.id} onClick={scrollToTop} to={exp.path}>  
             <div  className='flex items-center justify-between my-5 hover:bg-[#3F3F46]/25 p-1 rounded-lg'> 
             <div className='flex items-center '>
-              <img className='w-10 h-10 rounded-full' src={exp.imgsrc} alt=''/>
+              <img loading='lazy' className='w-10 h-10 rounded-full' src={exp.imgsrc} alt='projects-img'/>
 
               <div className='pl-2'>
                 <h1 className='text-[#F4F4F5] font-title'>{exp.title}</h1>

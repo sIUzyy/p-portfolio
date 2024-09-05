@@ -1,18 +1,17 @@
-import React from 'react'
 import tin from '../assets/tin.webp'
 import { Link } from 'react-router-dom'
 import { media } from '../api/technology'
 
 const About = () => {
   return (
-    <div  className='max-w-2xl lg:h-screen  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>
+    <div  className='max-w-2xl lg:h-screen lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>
       
       <div className='container lg:flex'>
 
         <div className='col-1 md:order-last lg:w-2/5  '>
 
         <div className=' '>
-          <img className=' w-72 h-72    ml-5 rounded-2xl lg:mx-auto' src={tin} alt='ai-tin'/>
+          <img className=' w-72 h-72 ml-5 rounded-2xl lg:mx-auto' src={tin} alt='profile-picture'/>
 
         </div>
 
@@ -21,13 +20,13 @@ const About = () => {
               <div key={src.id} className='media flex items-center py-2'>
 
                 <div >
-                  <Link className='text-[#A1A1AA] hover:text-[#45F0DF]' to={src.path}>
+                  <Link target='_blank' className='text-[#A1A1AA] hover:text-[#A1A1AA]' to={src.path}>
                  {src.icon}
                   </Link>
                 </div>
 
                 <div className='flex items-center pl-3 font-p text-lg hover:text-[#A1A1AA] focus:text-[#A1A1AA]'>
-                  <Link to={src.path}>
+                  <Link target='_blank' to={src.path}>
                   {src.at}
                 </Link>
 
@@ -61,13 +60,13 @@ const About = () => {
               <div key={src.id} className='media flex items-center py-2'>
 
                 <div>
-                <Link className='text-[#A1A1AA] hover:text-[#45F0DF]' to={src.path}>
+                <Link target='_blank' className='text-[#A1A1AA] hover:text-[#A1A1AA]' to={src.path}>
                   {src.icon}
                   </Link>
                 </div>
 
                 <div className='flex items-center pl-3'>
-                  <Link className='font-p text-lg hover:text-[#45F0DF]' to={src.path}>
+                  <Link target='_blank' className='font-p text-lg hover:text-[#A1A1AA]' to={src.path}>
                   {src.at}
                 </Link>
                 </div>

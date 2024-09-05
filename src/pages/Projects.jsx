@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { projects } from '../api/projects'
 import { Link } from 'react-router-dom'
 import {BsGithub, BsLink45Deg} from 'react-icons/bs'
@@ -48,7 +48,7 @@ const Projects = () => {
       <div className='container-2 py-10 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
       {projects.map((exp, index) => (
         <div key={index} className='rounded-xl  p-4 hover:bg-[#3F3F46]/25'>
-           <img className='rounded-full h-10 w-10' src={exp.imgsrc} alt='' /> 
+           <img className='rounded-full h-10 w-10' src={exp.imgsrc} alt='projects-img' loading='lazy' /> 
 
          
             
@@ -73,12 +73,12 @@ const Projects = () => {
               <div className='py-4'>
                 <div className='flex items-center'>
                   <BsGithub size={25} className='text-[#A1A1AA]'/>
-                  <Link to={exp.src} className='ml-3 text-[#EFEFF0] font-p text-base'>{exp.title}</Link>
+                  <Link target='_blank' to={exp.src} className='ml-3 text-[#EFEFF0] font-p text-base'>{exp.title}</Link>
                 </div>
 
                 <div className='flex items-center py-3'>
                   <BsLink45Deg size={25} className='text-[#A1A1AA] '/>
-                  <Link to={exp.url} className='ml-3 text-[#EFEFF0] font-p text-base'>{exp.web}</Link>
+                  <Link target='_blank' to={exp.url} className='ml-3 text-[#EFEFF0] font-p text-base'>{exp.web}</Link>
                 </div>
                 
               </div>
