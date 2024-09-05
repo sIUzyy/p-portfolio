@@ -71,7 +71,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
+      // Avoid hiding the navbar when at the very top of the page
+      if (window.scrollY <= 0) {
+        setShowNavbar(true);
+      } else if (window.scrollY > lastScrollY) {
         // Scrolling down
         setShowNavbar(false);
       } else {
@@ -87,7 +90,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY])
+  }, [lastScrollY]);
 
   
   const scrollToTop = () => {
@@ -140,15 +143,7 @@ const Navbar = () => {
               ))}
 
             </div>
-
-
-
-            </div>
-
-
-
-
-
+        </div>
       
     </div>
   )

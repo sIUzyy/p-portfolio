@@ -158,22 +158,9 @@ const Main = () => {
   // download CV library
   const downloadCV = () => {
 
-<<<<<<< HEAD
     // path for my cv, i uploaded it on my public repo.
     const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' // when deploying use this.
     // const url = 'public/justinpeligro_CV.pdf' // local host testing
-=======
-
-    // path for my cv, i uploaded it on my public repo.
-    const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' // when deploying use this.
-    // const url = 'public/justinpeligro_CV.pdf' // local host testing
-
-    // use this for localhost testing
-    const url = './public/justinpeligro_CV.pdf' 
-
-    // use this if you will deploy the website.
-    //const url = 'https://justin-peligro.web.app/justinpeligro_CV.pdf' 
->>>>>>> 429fdc610f4afc0ff1bfe928e7e77d324d37d6a1
 
     // fetch the url using promise.
     fetch(url)
@@ -182,10 +169,6 @@ const Main = () => {
         saveAs(blob, 'justinpeligro_CV.pdf')
       })
       .catch(err => alert('Error downloading the file', err))
-<<<<<<< HEAD
-
-=======
->>>>>>> 429fdc610f4afc0ff1bfe928e7e77d324d37d6a1
   }
 
 
