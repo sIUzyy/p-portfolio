@@ -5,6 +5,14 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const Work = () => {
 
+    //automatically scroll to the top
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
   return (
     <div className='max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12 h-auto md:h-screen'>
 
@@ -55,7 +63,7 @@ const Work = () => {
 
         <div className='flex justify-end  font-h1 '>
           <div className='flex justify-between items-center'>
-            <Link className='mr-1' to={'/certification'} title='Click to View the Certifications'>Certification</Link>
+            <Link onClick={scrollToTop} className='mr-1' to={'/certification'} title='Click to View the Certifications'>Certification</Link>
             <HiOutlineArrowLongRight/>
           </div>
         </div>

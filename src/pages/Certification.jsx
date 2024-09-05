@@ -37,7 +37,6 @@ const Certification = () => {
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     alt={item.company}
                     className='rounded-lg hover:opacity-70'
-                    loading="lazy"
                 />
             </div>
         

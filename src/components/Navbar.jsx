@@ -113,7 +113,7 @@ const Navbar = () => {
 
           <div className={
             `fixed w-full left-0 px-4 flex items-center justify-between md:hidden transition-transform duration-300 
-            ${showNavbar ? 'top-10' : '-top-full'}
+            ${showNavbar ? 'top-5' : '-top-full'}
             `}>
 
               <div>
