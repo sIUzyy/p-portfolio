@@ -4,19 +4,19 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-
 import knowlesCompletion from '../assets/certi/knowles-completion.png'
+
+
 const Certification = () => {
 
     const itemData = [
         {
             img: knowlesCompletion,
             company: "knowles training institute",
-            certi: "certificate of completion", 
+            certi: "IT Intern", 
+            date: '2023 - 2024'
         },
-        
-
-
+    
     ]
   return (
     <div className=' max-w-2xl border-x border-[#27272C]  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white  md:px-5 lg:px-8 xl:px-12 h-screen '>
@@ -45,7 +45,7 @@ const Certification = () => {
                 title={
                     <div className='flex justify-between'>
                         <h1 className='text-[#d1d1d4] capitalize font-p text-sm'>{item.company} </h1>
-                        <h1 className='text-[#d1d1d4]  font-p text-sm'>2023 - 2024</h1>
+                        <h1 className='text-[#A1A1AA]  font-p text-sm'>{item.date}</h1>
                     </div>
                 }
                 subtitle={<h1 className='text-[#A1A1AA] capitalize font-p text-sm'>{item.certi}</h1>}
