@@ -144,6 +144,8 @@ import {  SiJavascript,
 import {  FaReact } from 'react-icons/fa'
 import {  useTypewriter } from 'react-simple-typewriter'
 
+import { motion } from 'framer-motion';
+
 import { saveAs } from 'file-saver'
 // import style from "./css/style.css"
 
@@ -180,6 +182,9 @@ const Main = () => {
     });
   }
 
+  // tech looping
+  const duplicatedTech = [...tech, ...tech];
+
   return (
     <div className={`main-content max-w-2xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12`}>
 
@@ -214,7 +219,30 @@ const Main = () => {
       <h1 className='font-main tracking-widest text-2xl'>TECHNOLOGIES</h1>
     </div>
 
-    <div className=''>
+    <div className="overflow-hidden whitespace-nowrap py-4">
+      <motion.div
+        className="inline-flex space-x-8"
+        animate={{ x: ['0%', '-100%'] }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }} 
+        style={{
+      display: 'inline-flex',
+      width: window.innerWidth < 640 
+        ? 'calc(300% + 10px)'
+        : window.innerWidth < 768 
+        ? 'calc(200% + 10px)'
+        : 'calc(100% + 10px)' 
+    }} 
+      >
+        {duplicatedTech.map((techno, index) => (
+          <div key={index} className="flex items-center pb-5">
+            <span className="mr-4 text-[#A1A1AA]">{techno.icon}</span>
+            <h1 className="text-[#A1A1AA] font-main tracking-widest md:text-2xl">{techno.name}</h1>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+
+    {/* <div className=''>
       <div className='grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-5'>
       {tech.map((techno) => (
 
@@ -224,7 +252,7 @@ const Main = () => {
       </div>
       ))}
       </div>
-    </div>
+    </div> */}
 
     
 

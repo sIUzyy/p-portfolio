@@ -1,13 +1,26 @@
-// import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
+import CircularProgress from '@mui/material/CircularProgress';
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 import knowlesCompletion from '../assets/certi/knowles-completion.png'
+import { useState, useEffect } from 'react';
 
 
 const Certification = () => {
+
+    const [isLoading, setIsLoading] = useState(true)
+
+    // set the isLoading to false after 1.3 sec.
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsLoading(false);
+        }, 1300); 
+    
+        // clean up
+        return () => clearTimeout(timer); 
+      }, [])
 
     const itemData = [
         {
@@ -26,38 +39,46 @@ const Certification = () => {
         <p className='text-[#A1A1AA] font-p text-lg'>Here is a list of certifications I’ve earned throughout my journey.</p>
     </div>
 
+    {isLoading ?
+    <div className='flex justify-center '>
+        <CircularProgress />
+    </div>
+    
+       
+    :
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
     {itemData.map((item) => (
-        
-        <Zoom key={item.img}>
-        <ImageListItem className='my-3 md:mx-1 md:px-2 ' >
-            <div>
-                <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.company}
-                    className='rounded-lg hover:opacity-70'
-                />
-            </div>
-        
-            <ImageListItemBar
-           
-                title={
-                    <div className='flex justify-between'>
-                        <h1 className='text-[#d1d1d4] capitalize font-p text-sm'>{item.company} </h1>
-                        <h1 className='text-[#A1A1AA]  font-p text-sm'>{item.date}</h1>
-                    </div>
-                }
-                subtitle={<h1 className='text-[#A1A1AA] capitalize font-p text-sm'>{item.certi}</h1>}
-                position="below"
+    
+    <Zoom key={item.img}>
+    <ImageListItem className='my-3 md:mx-1 md:px-2 ' >
+        <div>
+            <img
+                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                src={`${item.img}?w=248&fit=crop&auto=format`}
+                alt={item.company}
+                className='rounded-lg hover:opacity-70'
             />
-            
-        </ImageListItem>
-        </Zoom>
+        </div>
+    
+        <ImageListItemBar
+       
+            title={
+                <div className='flex justify-between'>
+                    <h1 className='text-[#d1d1d4] capitalize font-p text-sm'>{item.company} </h1>
+                    <h1 className='text-[#A1A1AA]  font-p text-sm'>{item.date}</h1>
+                </div>
+            }
+            subtitle={<h1 className='text-[#A1A1AA] capitalize font-p text-sm'>{item.certi}</h1>}
+            position="below"
+        />
         
+    </ImageListItem>
+    </Zoom>
+    
     ))}
-
     </div>
+        }
+    
 </div>
   )
 }

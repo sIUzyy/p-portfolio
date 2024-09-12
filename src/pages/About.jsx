@@ -2,7 +2,24 @@ import tin from '../assets/tin.webp'
 import { Link } from 'react-router-dom'
 import { media } from '../api/technology'
 
+import { useState, useEffect } from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
+
+
 const About = () => {
+
+  const [isLoading, setIsLoading] = useState(true)
+
+  // set the isLoading to false after 1.2 sec.
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+
+    // clean up
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div  className='max-w-2xl lg:h-screen lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white border-x border-[#27272C] md:px-5 lg:px-8 xl:px-12'>
       
@@ -10,11 +27,14 @@ const About = () => {
 
         <div className='col-1 md:order-last lg:w-2/5  '>
 
-        <div className=' '>
-          <img className=' w-72 h-72 ml-5 rounded-2xl lg:mx-auto' src={tin} alt='profile-picture'/>
-
-        </div>
-
+      {isLoading 
+      ? <div className='flex justify-center'><CircularProgress/> </div>
+      :   
+      <div className=' '>
+        <img className=' w-72 h-72 ml-5 rounded-2xl lg:mx-auto' src={tin} alt='profile-picture'/>
+      </div>
+      }
+      
           <div className='py-16 hidden lg:block lg:pl-16 '>
               {media.map((src) => (
               <div key={src.id} className='media flex items-center py-2'>
