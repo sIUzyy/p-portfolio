@@ -13,14 +13,20 @@ const Certification = () => {
 
     const [isLoading, setIsLoading] = useState(true)
 
+
+
     // set the isLoading to false after 1.3 sec.
     useEffect(() => {
         const timer = setTimeout(() => {
           setIsLoading(false);
+
         }, 1300); 
+
     
         // clean up
         return () => clearTimeout(timer); 
+
+       
       }, [])
 
     const itemData = [
@@ -35,12 +41,19 @@ const Certification = () => {
             img: mdmsSeminar,
             company: "Modern Database Management Systems",
             certi: "Workshop", 
-            date: 'Sept 14, 2024'
+            date: '2024'
         },
+
+        
+  
+      
     
     ]
   return (
-    <div className=' max-w-2xl border-x border-[#27272C]  lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white  md:px-5 lg:px-8 xl:px-12 h-screen '>
+    <div  
+    className={`max-w-2xl border-x border-[#27272C] h-auto lg:h-screen lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white  md:px-5 lg:px-8 xl:px-12`}
+   
+    >
       
       <div className='container-1 mb-10'>
         <h1 className='text-4xl font-h1 font-bold pb-2'>Certifications</h1>
@@ -48,7 +61,7 @@ const Certification = () => {
     </div>
 
     {isLoading ?
-    <div className='flex justify-center '>
+    <div className='flex justify-center ' >
         <CircularProgress />
     </div>
     
@@ -72,7 +85,7 @@ const Certification = () => {
        
             title={
                 <div className='flex justify-between'>
-                    <h1 className='text-[#d1d1d4] capitalize font-p text-sm'>{item.company} </h1>
+                    <h1 className='text-[#d1d1d4] capitalize font-p text-sm '>{item.company} </h1>
                     <h1 className='text-[#A1A1AA]  font-p text-sm'>{item.date}</h1>
                 </div>
             }
