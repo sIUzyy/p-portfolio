@@ -5,6 +5,7 @@ import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 import knowlesCompletion from '../assets/certi/knowles-completion.png'
+import mdmsSeminar from '../assets/certi/mdms-seminar.png'
 import { useState, useEffect } from 'react';
 
 
@@ -28,6 +29,13 @@ const Certification = () => {
             company: "knowles training institute",
             certi: "IT Intern", 
             date: '2023 - 2024'
+        },
+
+        {
+            img: mdmsSeminar,
+            company: "Modern Database Management Systems",
+            certi: "Workshop", 
+            date: 'Sept 14, 2024'
         },
     
     ]
