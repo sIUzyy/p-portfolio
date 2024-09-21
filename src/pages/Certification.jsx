@@ -6,28 +6,16 @@ import 'react-medium-image-zoom/dist/styles.css'
 
 import knowlesCompletion from '../assets/certi/knowles-completion.png'
 import mdmsSeminar from '../assets/certi/mdms-seminar.png'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 const Certification = () => {
 
     const [isLoading, setIsLoading] = useState(true)
 
-
-
-    // set the isLoading to false after 1.3 sec.
-    useEffect(() => {
-        const timer = setTimeout(() => {
-          setIsLoading(false);
-
-        }, 1300); 
-
-    
-        // clean up
-        return () => clearTimeout(timer); 
-
-       
-      }, [])
+    const imageListLoad = () => {
+        setIsLoading(false)
+    }
 
     const itemData = [
         {
@@ -43,41 +31,31 @@ const Certification = () => {
             certi: "Workshop", 
             date: '2024'
         },
-
-        
-  
-      
     
     ]
   return (
     <div  
-    className={`max-w-2xl border-x border-[#27272C] h-auto lg:h-screen lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white  md:px-5 lg:px-8 xl:px-12`}
-   
-    >
+    className={`max-w-2xl border-x border-[#27272C] h-auto md:h-screen lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto bg-[#18181B] px-3 py-12  text-white  md:px-5 lg:px-8 xl:px-12`}>
       
       <div className='container-1 mb-10'>
         <h1 className='text-4xl font-h1 font-bold pb-2'>Certifications</h1>
         <p className='text-[#A1A1AA] font-p text-lg'>Here is a list of certifications I’ve earned throughout my journey.</p>
     </div>
 
-    {isLoading ?
-    <div className='flex justify-center ' >
-        <CircularProgress />
-    </div>
-    
-       
-    :
+    {isLoading && <div className='flex justify-center'> <CircularProgress/></div>}
+
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
     {itemData.map((item) => (
     
     <Zoom key={item.img}>
-    <ImageListItem className='my-3 md:mx-1 md:px-2 ' >
+    <ImageListItem onLoad={imageListLoad} style={{ display: isLoading ? '' : 'block' }}  className='my-3 md:mx-1 md:px-2 ' >
         <div>
             <img
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=248&fit=crop&auto=format`}
                 alt={item.company}
                 className='rounded-lg hover:opacity-70'
+                
             />
         </div>
     
@@ -98,7 +76,6 @@ const Certification = () => {
     
     ))}
     </div>
-        }
     
 </div>
   )
