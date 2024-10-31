@@ -52,55 +52,50 @@ const education = [
 
 const tech = [
   {
-    id: 1,
     name: "HTML",
     icon: <AiFillHtml5 className="hover:text-[#E96228]" size={50} />,
   },
 
   {
-    id: 2,
     name: "CSS",
     icon: <DiCss3 className="hover:text-[#1572B6]" size={50} />,
   },
 
   {
-    id: 3,
     name: "Javascript",
     icon: <SiJavascript className="hover:text-yellow-500" size={50} />,
   },
 
   {
-    id: 4,
     name: "ReactJS",
     icon: <FaReact className="hover:text-[#5DD3F3]" size={50} />,
   },
 
   {
-    id: 5,
-    name: "NextJS",
-    icon: <TbBrandNextjs className="hover:text-white" size={50} />,
+    name: "NodeJS",
+    icon: <FaNodeJs className="hover:text-[#56A143]" size={50} />,
+  },
+  {
+    name: "ExpressJS",
+    icon: <SiExpress className="hover:text-white" size={50} />,
   },
 
   {
-    id: 6,
     name: "Tailwind",
     icon: <SiTailwindcss className="hover:text-[#38BDF8]" size={50} />,
   },
 
   {
-    id: 7,
     name: "Firebase",
     icon: <SiFirebase className="hover:text-[#FFCD33]" size={50} />,
   },
 
   {
-    id: 8,
     name: "MongoDB",
     icon: <SiMongodb className="hover:text-[#5a9635]" size={50} />,
   },
 
   {
-    id: 9,
     name: "Git",
     icon: <FaGitAlt className="hover:text-[#f03c2e]" size={50} />,
   },
@@ -126,13 +121,11 @@ import {
   AiFillFacebook,
 } from "react-icons/ai";
 
-import { SiMongodb } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
+import { SiMongodb, SiExpress } from "react-icons/si";
+import { FaGitAlt, FaNodeJs } from "react-icons/fa";
 
 import { work } from "../api/work";
 import { experiences } from "../api/work";
-
-import { TbBrandNextjs } from "react-icons/tb";
 
 import { DiCss3 } from "react-icons/di";
 
